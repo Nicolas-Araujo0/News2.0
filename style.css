@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background: url(https://wallpaperaccess.com/full/2878903.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200vh;
+}
+main {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(245, 222, 179, 1);
+    border-radius: 5px;
+    box-shadow: 10px 5px rgba(0, 0, 0, 0.5);
+}
+h1{
+    font-size: 70px;
+    text-align: center;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+h2{
+font-size: 30px;
+}
+h3{
+    font-size: 20px;
+}
+h4{
+    font-size: 20px;
+}
+main div div h2{
+    text-decoration: underline;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+section header h2 {
+    margin-top: 30px;
+    text-decoration: underline;
+}
+section div img {
+    width: 330px;
+    height: 200px;
+}
+
+#changeLanguage img {
+    width: 50px;
+    height: 40px;
+
+}
+
+#changeLanguage button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#changeLanguage button {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    padding: 2px;
+    z-index: 20;
+    top: 0;
+    right: 5%;
+}
+
+#changeLanguage button:first-child {
+    display: block;
+}
+
+#changeLanguage:hover button {
+    display: block;
+}
+
+#changeLanguage button:nth-child(1) {
+    position: absolute;
+    top: 3%;
+}
+
+#changeLanguage :nth-child(2) {
+    position: absolute;
+    top: 7%;
+}
+
+#changeLanguage :nth-child(3) {
+    position: absolute;
+    top: 11%;
+}
+
+#changeLanguage :nth-child(4) {
+    position: absolute;
+    top: 15%;
+}
+
+#changeLanguage :nth-child(5) {
+    position: absolute;
+    top: 19%;
+}
+
+#changeLanguage :nth-child(6) {
+    position: absolute;
+    top: 23%;
+}
+
+
+#main {
+    display: flex;
+}
+
+#h2-mainArticle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 120%;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#best {
+    padding: 30px 0;
+}
+
+#best article a {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+#best article a img {
+    width: 800px;
+    height: 350px;
+}
+
+#rest {
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#rest article {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+#rest article a div {
+    display: flex;
+}
+
+#rest article:nth-child(3) {
+    border-bottom: none;
+}
+
+#rest article a div img {
+    width: 40%;
+    height: 150px;
+}
+
+#rest article a div h3 {
+    width: 60%;
+    align-self: center;
+    padding: 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a h2,
+a h3,
+a h4 {
+    text-decoration: underline;
+}
+
+.line {
+    display: flex;
+    border-bottom: 1px solid black;
+    padding: 20px 0;
+}
+
+.line article {
+    width: 33%;
+}
+
+.line article a div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.line article a div h4,.line article a span{
+    width: 90%;
+    display: block;
+    text-align: center  ;
+}
+@media (max-width: 800px) {
+    body{
+        background: none;
+
+    }
+    main{
+        width: 90%;
+        background-color: rgba(245, 222, 179, 0.5);
+    }
+    #main {
+        flex-direction: column;
+    }
+    #best article a img {
+        width: 100%;
+        height: 100%;
+    }
+    #best article a h2{
+        width: 100%;
+        font-size: 25px;
+    }
+    #best article a p{
+        width: 100%;
+        font-size: 21px;
+    }
+    #rest article a div img{
+        width: 50%;
+    }
+    #rest article a div h3{
+        width: 50%;
+        font-size: 20px;
+    }
+    #rest article a span{
+        display: flex;
+        justify-content: end;
+    }
+    .line{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .line article{
+        width: 100%;
+        padding: 10px 0;
+    }
+    .line article a img{
+        width: 80%;
+        height: 250px;
+    }
+    .line article a div h4{
+        padding: 10px 0;
+    }
+    #h2-mainArticle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        border-right: none;
+    }
+    #changeLanguage button:nth-child(1) {
+        position: absolute;
+        top: 3%;
+    }
+    
+    #changeLanguage :nth-child(2) {
+        position: absolute;
+        top: 6%;
+    }
+    
+    #changeLanguage :nth-child(3) {
+        position: absolute;
+        top: 9%;
+    }
+    
+    #changeLanguage :nth-child(4) {
+        position: absolute;
+        top: 12%;
+    }
+    
+    #changeLanguage :nth-child(5) {
+        position: absolute;
+        top: 15%;
+    }
+    
+    #changeLanguage :nth-child(6) {
+        position: absolute;
+        top: 18%;
+    }
+}
