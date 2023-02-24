@@ -106,27 +106,27 @@ function showNewsSecondary(database) {
 takeDataBase("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=21e825da1415461e9ea84507ccbcb84a")
 
 let buttons = [{
-    src: "https://www.iconarchive.com/download/i109136/wikipedia/flags/FR-France-Flag.ico",
+    src: "assets/Wikipedia-Flags-FR-France-Flag.webp",
     countryCode: "fr",
     alt: "France flag"
 }, {
-    src: "https://www.iconarchive.com/download/i109141/wikipedia/flags/GB-United-Kingdom-Flag.ico",
+    src: "assets/Wikipedia-Flags-GB-United-Kingdom-Flag.webp",
     countryCode: "us",
     alt: "UK flag"
 }, {
-    src: "https://icons.iconarchive.com/icons/custom-icon-design/flag/256/Japan-Flag-icon.png",
+    src: "assets/Japan-Flag-icon.webp",
     countryCode: "jp",
     alt: "JP flag"
 }, {
-    src: "https://www.iconarchive.com/download/i109175/wikipedia/flags/IT-Italy-Flag.ico",
+    src: "assets/Wikipedia-Flags-IT-Italy-Flag.webp",
     countryCode: "it",
     alt: "IT flag"
 }, {
-    src: "https://icons.iconarchive.com/icons/wikipedia/flags/256/RU-Russia-Flag-icon.png",
+    src: "assets/RU-Russia-Flag-icon.webp",
     countryCode: "ru",
     alt: "RU flag"
 }, {
-    src: "https://www.iconarchive.com/download/i109117/wikipedia/flags/DE-Germany-Flag.ico",
+    src: "assets/Wikipedia-Flags-DE-Germany-Flag.webp",
     countryCode: "de",
     alt: "DE flag"
 }
