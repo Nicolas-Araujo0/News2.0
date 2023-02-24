@@ -8,7 +8,7 @@ async function takeDataBase(url) {
 
 let divBest = document.querySelector("#best")
 let divRest = document.querySelector("#rest")
-let a = 4;
+let articleShownMain = 4;
 function showNewsHead() {
     let newArticle = document.createElement("article");
     let newA = document.createElement("a")
@@ -24,10 +24,10 @@ function showNewsHead() {
     divBest.append(newArticle)
 
     divRest.innerHTML = ""
-    a=4
-    for (let i = 1; i < a; i++) {
+    articleShownMain=4
+    for (let i = 1; i < articleShownMain; i++) {
         if (data.articles[i].urlToImage == null) {
-            a++
+            articleShownMain++
         } else {
             let newArticle = document.createElement("article");
             let newA = document.createElement("a")
@@ -48,29 +48,29 @@ let language = "fr"
 let category
 
 let imgShown = 3;
-let d;
+let dataSecond;
 
 async function takeDataBaseSecondary(url) {
     response = await fetch(url);
-    d = await response.json();
-    showNewsSecondary(d)
+    dataSecond = await response.json();
+    showNewsSecondary(dataSecond)
     //return d;
 }
 
 category = "sports"
-takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=21e825da1415461e9ea84507ccbcb84a&category=" + category);
+takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=b5e101338ce24b57b559e39f411f02fc&category=" + category);
 category = "science"
-takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=21e825da1415461e9ea84507ccbcb84a&category=" + category);
+takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=b5e101338ce24b57b559e39f411f02fc&category=" + category);
 category = "entertainment"
-takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=21e825da1415461e9ea84507ccbcb84a&category=" + category);
+takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=b5e101338ce24b57b559e39f411f02fc&category=" + category);
 
 
 /*
-takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country="+language+"&apiKey=21e825da1415461e9ea84507ccbcb84a&category=science").then((dataHealth)=>{
+takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country="+language+"&apiKey=b5e101338ce24b57b559e39f411f02fc&category=science").then((dataHealth)=>{
     showNewsSecondary(dataHealth);
 })
 
-takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country="+language+"&apiKey=21e825da1415461e9ea84507ccbcb84a&category=sports").then((dataSPorts)=>{
+takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country="+language+"&apiKey=b5e101338ce24b57b559e39f411f02fc&category=sports").then((dataSPorts)=>{
     showSportsEncadrt(dataSportzs);
 })
 */
@@ -78,7 +78,7 @@ takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country="+language+"
 
 let sectionSelect = document.querySelector("section")
 let divPosition = document.querySelectorAll("section > div")
-let c = 0;
+let count = 0;
 function showNewsSecondary(database) {
     imgShown = 3;
     for (let i = 0; i < imgShown; i++) {
@@ -96,14 +96,14 @@ function showNewsSecondary(database) {
             <h4>${database.articles[i].title}</h4></div>
             <span>${database.articles[i].publishedAt}</span>`
             newArticle.append(newA)
-            divPosition[c].append(newArticle)
+            divPosition[count].append(newArticle)
         }
     }
-    c++
+    count++
 }
 
 
-takeDataBase("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=21e825da1415461e9ea84507ccbcb84a")
+takeDataBase("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=b5e101338ce24b57b559e39f411f02fc")
 
 let buttons = [{
     src: "assets/Wikipedia-Flags-FR-France-Flag.webp",
@@ -153,10 +153,7 @@ function langue(country) {
 
     divSwapLanguage.innerHTML=""
     for(let i = 1 ; i < buttons.length; i++){
-        console.log(language)
-        console.log("check")
         if(buttons[i].countryCode == country){
-            console.log("true")
             let buttonStorage = buttons[0]
             buttons[0] = buttons[i];
             buttons[i] = buttonStorage
@@ -168,19 +165,19 @@ function langue(country) {
 
     languageButtonSelect = document.querySelectorAll("#changeLanguage button")
     languageButtonSelect[0].disabled = true;
-    c = 0;
+    count = 0;
     divPosition[0].innerHTML = ""
     divPosition[1].innerHTML = ""
     divPosition[2].innerHTML = ""
-    takeDataBase("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=21e825da1415461e9ea84507ccbcb84a")
+    takeDataBase("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=b5e101338ce24b57b559e39f411f02fc")
 
     category = "sports"
-    takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=21e825da1415461e9ea84507ccbcb84a&category=" + category);
+    takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=b5e101338ce24b57b559e39f411f02fc&category=" + category);
     category = "science"
-    takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=21e825da1415461e9ea84507ccbcb84a&category=" + category);
+    takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=b5e101338ce24b57b559e39f411f02fc&category=" + category);
     category = "entertainment"
-    takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=21e825da1415461e9ea84507ccbcb84a&category=" + category);
+    takeDataBaseSecondary("https://newsapi.org/v2/top-headlines?country=" + language + "&apiKey=b5e101338ce24b57b559e39f411f02fc&category=" + category);
 }
 
-let keyKimarche= "21e825da1415461e9ea84507ccbcb84a"
-let key = "21e825da1415461e9ea84507ccbcb84a"
+let keyKimarche= "b5e101338ce24b57b559e39f411f02fc"
+let key = "b5e101338ce24b57b559e39f411f02fc"

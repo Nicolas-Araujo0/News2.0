@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-
+    font-family: 'Noto Serif', serif;
 }
 body{
     background: url(https://wallpaperaccess.com/full/2878903.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 200vh;
+    height: 100%;
 }
 main {
     width: 80%;
@@ -111,7 +113,7 @@ section div img {
 }
 
 
-#main {
+#articleMain {
     display: flex;
 }
 
@@ -206,13 +208,16 @@ a h4 {
 @media (max-width: 800px) {
     body{
         background: none;
-
+        
+    }
+    h1{
+        color: black;
     }
     main{
         width: 90%;
         background-color: rgba(245, 222, 179, 0.5);
     }
-    #main {
+    #articleMain {
         flex-direction: column;
     }
     #best article a img {
